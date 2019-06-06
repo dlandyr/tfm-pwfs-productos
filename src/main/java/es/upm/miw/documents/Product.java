@@ -27,8 +27,8 @@ public class Product {
 
     private Boolean discontinued;
 
-    //@DBRef(lazy = true)
-    //private Provider provider;
+    @DBRef(lazy = true)
+    private Provider provider;
 
     public Product() {
 
@@ -104,13 +104,13 @@ public class Product {
         this.discontinued = discontinued;
     }
 
-    /*public Provider getProvider() {
+    public Provider getProvider() {
         return provider;
     }
 
     public void setProvider(Provider provider) {
         this.provider = provider;
-    }*/
+    }
 
     @Override
     public int hashCode() {
@@ -172,7 +172,7 @@ public class Product {
             return this;
         }
 
-        /*public Builder provider(Provider provider) {
+        public Builder provider(Provider provider) {
             this.product.provider = provider;
             return this;
         }
@@ -180,7 +180,7 @@ public class Product {
         public Builder tax(Tax tax) {
             this.product.tax = tax;
             return this;
-        }*/
+        }
 
         public Product build() {
             return this.product;
