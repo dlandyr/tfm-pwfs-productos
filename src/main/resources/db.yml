@@ -1,3 +1,48 @@
 # RECOMENDABLE SOLO AÑADIR
 
-# Productos
+# Providers
+providerList:
+- &pr1
+  company: company-p1
+  nif: 12345678b
+  address: C/ TPV-provider, 1, 1A, 28000 Madrid
+  phone: 9166666601
+  email: p1@gmail.com
+  note: provider 1
+  active: true
+- &pr2
+  company: company-p2
+  address: C/ TPV-provider, 2, 2A, 28000 Madrid
+  phone: 9166666602
+  note: provider 2
+  active: false
+
+# Products
+productList:
+- &ar1
+  code: 2400000000012
+  reference: Prendas H
+  description: camisa
+  price: 18
+  stock: 20
+  tax: GENERAL
+  discontinued: false
+  provider: *pr1
+- &ar2
+  code: 2500000000016
+  reference: Prendas H
+  description: pantalon
+  price: 25.8
+  stock: 5
+  tax: FREE
+  discontinued: false
+  provider: *pr1
+- &ar3
+  code: 2600000000044
+  reference: Prendas H
+  description: corbata
+  price: 10.12
+  stock: 8
+  tax: GENERAL
+  discontinued: false
+  provider: *pr2
