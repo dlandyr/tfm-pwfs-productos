@@ -1,6 +1,6 @@
 package es.upm.miw.documents;
 
-//import es.upm.miw.dtos.ProviderDto;
+import es.upm.miw.dtos.ProviderDto;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -45,7 +45,7 @@ public class Provider {
         this.active = active;
     }
 
-    /*public Provider(ProviderDto providerDto) {
+    public Provider(ProviderDto providerDto) {
         this.id = providerDto.getId();
         this.company = providerDto.getCompany();
         this.nif = providerDto.getNif();
@@ -54,7 +54,7 @@ public class Provider {
         this.email = providerDto.getEmail();
         this.note = providerDto.getNote();
         this.active = providerDto.getActive();
-    }*/
+    }
 
     public String getId() {
         return id;
@@ -139,5 +139,4 @@ public class Provider {
                 ", active=" + active +
                 '}';
     }
-
 }
