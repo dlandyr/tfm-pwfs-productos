@@ -95,7 +95,7 @@ Se ha incorporado al fichero de `.travis.yml` el siguiente código:
 ```
 
 ### Swagger
-Se monta un cliente swagger para atacar al API: http://localhost:8080/api/v0/swagger-ui.html.
+Se monta un cliente swagger para atacar al API: http://localhost:8081/api/v0/swagger-ui.html.
 Para ello, se ha introducido una fichero de configuración [SwaggerConfig]()
 ```
 @Configuration @EnableSwagger2
