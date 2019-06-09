@@ -17,7 +17,7 @@ public class JwtService {
     private static final String USER = "user";
     private static final String NAME = "name";
     private static final String ROLES = "roles";
-    private static final String ISSUER = "tfm-pwfs-prodprov";
+    private static final String ISSUER = "tfm-pwfs-productos";
     private static final int EXPIRES_IN_MILLISECOND = 3600000;
     private static final String SECRET = "test";
 

@@ -47,7 +47,7 @@ public class DatabaseSeederService {
 
     private void initialize() {
         if (!this.productRepository.existsById(VARIOUS_CODE)) {
-            LogManager.getLogger(this.getClass()).warn("------- Create Article Various -----------");
+            LogManager.getLogger(this.getClass()).warn("------- Create Products -----------");
             Provider provider = new Provider(VARIOUS_NAME);
             this.providerRepository.save(provider);
             this.productRepository.save(Product.builder(VARIOUS_CODE).reference(VARIOUS_NAME).description(VARIOUS_NAME)
