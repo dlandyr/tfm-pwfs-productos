@@ -12,19 +12,12 @@ public class Product {
 
     @Id
     private String code;
-
     private LocalDateTime registrationDate;
-
     private String description;
-
     private BigDecimal price;
-
     private String reference;
-
     private Integer stock;
-
     private Tax tax;
-
     private Boolean discontinued;
 
     @DBRef(lazy = true)
