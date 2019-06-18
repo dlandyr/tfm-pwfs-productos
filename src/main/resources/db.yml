@@ -1,48 +1,51 @@
-# RECOMENDABLE SOLO AÑADIR
-
 # Providers
 providerList:
 - &pr1
-  company: company-p1
-  nif: 12345678b
-  address: C/ TPV-provider, 1, 1A, 28000 Madrid
-  phone: 9166666601
-  email: p1@gmail.com
-  note: provider 1
+  company: Company001
+  nif: 12345678B
+  address: Av. Entrevias 50, Madrid
+  phone: 666852452
+  email: company1@gmail.com
+  note: provider1
   active: true
 - &pr2
-  company: company-p2
-  address: C/ TPV-provider, 2, 2A, 28000 Madrid
-  phone: 9166666602
-  note: provider 2
+  company: Company002
+  address: Av. Pablo Iglesias 120, Madrid
+  phone: 920450225
+  note: provider2
   active: false
 
 # Products
 productList:
 - &ar1
   code: 2400000000012
-  reference: Prendas H
-  description: camisa
-  price: 18
-  stock: 20
+  description: ASUS VivoBook Pro N552VX-FY200T
+  price: 2600.35
+  stock: 10
   tax: GENERAL
   discontinued: false
   provider: *pr1
 - &ar2
   code: 2500000000016
-  reference: Prendas H
-  description: pantalon
-  price: 25.8
+  description: Canon PIXMA TS8151
+  price: 132.60
   stock: 5
-  tax: FREE
+  tax: GENERAL
   discontinued: false
   provider: *pr1
 - &ar3
   code: 2600000000044
-  reference: Prendas H
-  description: corbata
-  price: 10.12
+  description: Monitor AOC G2590PX
+  price: 2580.5
   stock: 8
   tax: GENERAL
+  discontinued: false
+  provider: *pr2
+- &ar4
+  code: 2600000000055
+  description: MicroSD 128Gb
+  price: 20.99
+  stock: 8
+  tax: REDUCED
   discontinued: false
   provider: *pr2

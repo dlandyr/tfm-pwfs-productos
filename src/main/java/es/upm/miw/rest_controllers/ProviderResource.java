@@ -30,7 +30,7 @@ public class ProviderResource {
     }
 
     @GetMapping(value = ID)
-    public ProviderDto read(@PathVariable String id) {
+    public ProviderDto readProvider(@PathVariable String id) {
         return this.providerController.read(id);
     }
 
@@ -39,8 +39,13 @@ public class ProviderResource {
         return this.providerController.readAllActives();
     }
 
+    @PostMapping(value = SEARCH)
+    public List<ProviderMinimunDto> findByAttributesLike(@Valid @RequestBody ProviderSearchInputDto providerSearchInputDto) {
+        return this.providerController.findByAttributesLike(providerSearchInputDto);
+    }
+
     @PostMapping
-    public ProviderDto create(@Valid @RequestBody ProviderDto providerDto) {
+    public ProviderDto createProvider(@Valid @RequestBody ProviderDto providerDto) {
         return this.providerController.create(providerDto);
     }
 
@@ -49,8 +54,9 @@ public class ProviderResource {
         return this.providerController.update(id, providerDto);
     }
 
-    @PostMapping(value = SEARCH)
-    public List<ProviderMinimunDto> findByAttributesLike(@Valid @RequestBody ProviderSearchInputDto providerSearchInputDto) {
-        return this.providerController.findByAttributesLike(providerSearchInputDto);
+    @DeleteMapping(value = ID)
+    public void delete(@PathVariable String code) {
+        this.providerController.delete(code);
     }
+
 }

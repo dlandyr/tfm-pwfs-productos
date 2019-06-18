@@ -5,11 +5,8 @@ import javax.validation.constraints.NotNull;
 public class ProviderSearchInputDto {
 
     private String company;
-
     private String nif;
-
     private String email;
-
     private String phone;
 
     @NotNull

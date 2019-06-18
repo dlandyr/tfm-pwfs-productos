@@ -65,4 +65,10 @@ public class ProviderController {
         );
     }
 
+    public void delete(String code) {
+        Optional<Provider> provider = this.providerRepository.findById(code);
+        if (provider.isPresent()) {
+            this.providerRepository.delete(provider.get());
+        }
+    }
 }

@@ -8,11 +8,8 @@ import java.math.BigDecimal;
 public class ProductSearchOutputDto {
     @Id
     private String code;
-
     private String description;
-
     private Integer stock;
-
     private BigDecimal price;
 
     public ProductSearchOutputDto() {

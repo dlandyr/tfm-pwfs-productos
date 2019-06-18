@@ -5,11 +5,8 @@ import java.math.BigDecimal;
 public class ProductSearchInputDto {
 
     private String description;
-
     private Integer stock;
-
     private BigDecimal minPrice;
-
     private BigDecimal maxPrice;
 
     public ProductSearchInputDto() {

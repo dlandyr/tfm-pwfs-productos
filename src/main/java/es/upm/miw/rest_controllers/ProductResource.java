@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-//@PreAuthorize("hasRole('ADMIN') or hasRole('CUSTOMER')")
+//@PreAuthorize("hasRole('ADMIN') or hasRole('MANAGER') or hasRole('OPERATOR')")
 @RestController
 @RequestMapping(ProductResource.PRODUCTS)
 public class ProductResource {
@@ -25,7 +25,6 @@ public class ProductResource {
     @Autowired
     private ProductController productController;
 
-    @PreAuthorize("authenticated")
     @GetMapping
     public List<ProductSearchOutputDto> readAll() {
         return this.productController.readAll();
@@ -61,4 +60,5 @@ public class ProductResource {
     public void delete(@PathVariable String code) {
         this.productController.delete(code);
     }
+
 }

@@ -50,7 +50,7 @@ public class DatabaseSeederService {
             LogManager.getLogger(this.getClass()).warn("------- Create Products -----------");
             Provider provider = new Provider(VARIOUS_NAME);
             this.providerRepository.save(provider);
-            this.productRepository.save(Product.builder(VARIOUS_CODE).reference(VARIOUS_NAME).description(VARIOUS_NAME)
+            this.productRepository.save(Product.builder(VARIOUS_CODE).description(VARIOUS_NAME)
                     .price("100.00").stock(1000).provider(provider).build());
         }
     }
