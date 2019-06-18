@@ -33,7 +33,7 @@ public class SwaggerConfig {
     // http://localhost:8081/api/v0/swagger-ui.html
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder().title("MIW. Universidad Politécnica de Madrid")
-                .description("TFM. PWFS - Microservicio de Productos " + "https://github.com/dlandyr/tfm-pwfs-productos").build();
+                .description("TFM. PWFS - Microservicio de Productos. - " + "https://github.com/dlandyr/tfm-pwfs-productos").build();
     }
 
     private List<SecurityScheme> schemeList() {

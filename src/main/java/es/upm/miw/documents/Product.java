@@ -15,7 +15,6 @@ public class Product {
     private LocalDateTime registrationDate;
     private String description;
     private BigDecimal price;
-    private String reference;
     private Integer stock;
     private Tax tax;
     private Boolean discontinued;
@@ -61,14 +60,6 @@ public class Product {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
-    }
-
-    public String getReference() {
-        return reference;
-    }
-
-    public void setReference(String reference) {
-        this.reference = reference;
     }
 
     public Integer getStock() {
@@ -120,7 +111,6 @@ public class Product {
                 ", registrationDate=" + registrationDate +
                 ", description='" + description + '\'' +
                 ", price=" + price +
-                ", reference='" + reference + '\'' +
                 ", stock=" + stock +
                 ", tax=" + tax +
                 ", discontinued=" + discontinued +
@@ -136,11 +126,6 @@ public class Product {
             this.product.discontinued = false;
             this.product.stock = 0;
             this.product.tax = Tax.GENERAL;
-        }
-
-        public Builder reference(String reference) {
-            this.product.reference = reference;
-            return this;
         }
 
         public Builder description(String description) {

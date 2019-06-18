@@ -3,8 +3,7 @@ package es.upm.miw.dtos;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import es.upm.miw.documents.Product;
-import es.upm.miw.documents.Product;
-//import es.upm.miw.documents.Provider;
+import es.upm.miw.documents.Provider;
 import es.upm.miw.documents.Tax;
 
 import java.math.BigDecimal;
@@ -13,52 +12,33 @@ import java.time.LocalDateTime;
 public class ProductDto extends ProductMinimumDto {
 
     @JsonInclude(Include.NON_NULL)
-    private String reference;
-
-    @JsonInclude(Include.NON_NULL)
     private BigDecimal price;
-
     private Integer stock;
-
     private Tax tax;
-
     @JsonInclude(Include.NON_NULL)
     private String provider;
-
     @JsonInclude(Include.NON_NULL)
     private Boolean discontinued;
-
     @JsonInclude(Include.NON_NULL)
     private LocalDateTime registrationDate;
 
     public ProductDto() {
-        // Empty for framework
     }
 
-    public ProductDto(String code, String description, String reference, BigDecimal price, Integer stock, Tax tax) {
+    public ProductDto(String code, String description, BigDecimal price, Integer stock, Tax tax) {
         super(code, description);
-        this.reference = reference;
         this.price = price;
         this.stock = stock;
         this.tax = tax;
     }
 
     public ProductDto(Product product) {
-        this(product.getCode(), product.getDescription(), product.getReference(), product.getPrice(), product.getStock(), product.getTax());
+        this(product.getCode(), product.getDescription(), product.getPrice(), product.getStock(), product.getTax());
         this.setDiscontinued(product.getDiscontinued());
         this.registrationDate = product.getRegistrationDate();
-        /*if (product.getProvider() != null) {
+        if (product.getProvider() != null) {
             this.setProvider(product.getProvider().getId());
-        }*/
-    }
-
-    public String getReference() {
-        return reference;
-    }
-
-    public ProductDto setReference(String reference) {
-        this.reference = reference;
-        return this;
+        }
     }
 
     public BigDecimal getPrice() {
@@ -83,7 +63,7 @@ public class ProductDto extends ProductMinimumDto {
         return provider;
     }
 
-    /*public ProductDto setProvider(String provider) {
+    public ProductDto setProvider(String provider) {
         this.provider = provider;
         return this;
     }
@@ -91,7 +71,7 @@ public class ProductDto extends ProductMinimumDto {
     public ProductDto setProvider(Provider provider) {
         this.provider = provider.getId();
         return this;
-    }*/
+    }
 
     public Boolean getDiscontinued() {
         return discontinued;
@@ -121,8 +101,7 @@ public class ProductDto extends ProductMinimumDto {
     @Override
     public String toString() {
         return "ProductDto{" +
-                "reference='" + reference + '\'' +
-                ", price=" + price +
+                "price=" + price +
                 ", stock=" + stock +
                 ", provider='" + provider + '\'' +
                 ", discontinued=" + discontinued +

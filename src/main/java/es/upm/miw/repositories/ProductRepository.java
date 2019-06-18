@@ -19,8 +19,6 @@ public interface ProductRepository extends MongoRepository<Product, String> {
 
     Product findByCode(String code);
 
-    //List<ProductSearchOutputDto> findByReferenceNullAndProviderNull();
-
     Product findFirstByCodeStartingWithOrderByRegistrationDateDescCodeDesc(String prefix);
 
 }
