@@ -24,12 +24,10 @@ public class Product {
     private Provider provider;
 
     public Product() {
-
         this.registrationDate = LocalDateTime.now();
     }
 
     public static Builder builder(String code) {
-
         return new Builder(code);
     }
 
@@ -179,5 +177,4 @@ public class Product {
             return this.product;
         }
     }
-
 }
