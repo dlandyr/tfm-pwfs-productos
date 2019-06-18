@@ -10,24 +10,16 @@ public class Provider {
 
     @Id
     private String id;
-
     @Indexed(unique = true)
     private String company;
-
     private String nif;
-
     private String address;
-
     private String phone;
-
     private String email;
-
     private String note;
-
     private Boolean active;
 
     public Provider() {
-        // for framework
     }
 
     public Provider(String company) {

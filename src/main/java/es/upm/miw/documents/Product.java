@@ -12,31 +12,22 @@ public class Product {
 
     @Id
     private String code;
-
     private LocalDateTime registrationDate;
-
     private String description;
-
     private BigDecimal price;
-
     private String reference;
-
     private Integer stock;
-
     private Tax tax;
-
     private Boolean discontinued;
 
     @DBRef(lazy = true)
     private Provider provider;
 
     public Product() {
-
         this.registrationDate = LocalDateTime.now();
     }
 
     public static Builder builder(String code) {
-
         return new Builder(code);
     }
 
@@ -186,5 +177,4 @@ public class Product {
             return this.product;
         }
     }
-
 }
